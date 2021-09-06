@@ -1,38 +1,118 @@
-.App {
+.app {
+  display: flex;
+  height: 100vh;
+}
+
+.contacts {
+  background-color: #fdfdfd;
+  width: 260px;
+}
+
+.contacts .header {
+  color: gray;
+  font-size: smaller;
+  padding: 15px 18px 8px;
+}
+
+.contacts .item {
+  align-items: center;
+  border-bottom: 1px solid #f2f2f2;
+  cursor: pointer;
+  display: flex;
+  padding: 12px 15px;
+}
+
+.contacts .item:hover {
+  background-color: #fafafa;
+}
+
+.contacts .item.active {
+  background-color: #0e8fff;
+  color: white;
+  font-weight: bold;
+  cursor: default;
+}
+
+.contacts .item .image {
+  font-size: 30px;
+  line-height: 1;
+  margin-right: 12px;
   text-align: center;
+  width: 30px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.contacts .item .name {
+  flex: 1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.messenger {
+  box-shadow: 0 0 10px rgba(0, 0, 0, .18);
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  overflow: hidden;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.messenger .body {
+  flex: 1;
+  overflow: auto;
+  padding: 20px 25px;
+}
+
+.messenger .body .item {
+  align-items: flex-start;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-bottom: 8px;
+}
+
+.messenger .body .item.mine {
+  align-items: flex-end;
+}
+
+.messenger .body .item .text {
+  background-color: #0f8ffe;
+  border-radius: 15px;
   color: white;
+  padding: 8px 16px;
 }
 
-.App-link {
-  color: #61dafb;
+.messenger .body .item .time {
+  color: #555;
+  font-size: 11px;
+  padding: 2px 7px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.messenger .form {
+  border-top: 1px solid #ededed;
+  box-shadow: 0 0 8px rgba(0, 0, 0, .12);
+  display: flex;
+}
+
+.messenger .form input {
+  border: 0;
+  flex: 1;
+  font-size: 16px;
+  height: 60px;
+  outline: 0;
+  padding: 15px 25px;
+}
+
+.messenger .form button {
+  border: 0;
+  background-color: #0f8fff;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  width: 120px;
+}
+
+.messenger .form button:hover {
+  opacity: 0.9;
+}
+
+.messenger .form button[disabled] {
+  background-color: #ddd;
+  cursor: default;
 }
